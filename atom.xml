@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.lopy.win/"/>
-  <updated>2018-10-30T10:41:52.000Z</updated>
+  <updated>2018-10-30T11:12:55.552Z</updated>
   <id>https://blog.lopy.win/</id>
   
   <author>
@@ -17,20 +17,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>win7 install vagrant</title>
-    <link href="https://blog.lopy.win/2018/10/29/2018-2018-10-29-win7-install-vagrant/"/>
-    <id>https://blog.lopy.win/2018/10/29/2018-2018-10-29-win7-install-vagrant/</id>
-    <published>2018-10-29T10:15:21.000Z</published>
-    <updated>2018-10-30T10:41:52.000Z</updated>
+    <title>为 hexo-next 增加搜索功能</title>
+    <link href="https://blog.lopy.win/2018/10/30/2018-2018-10-30-hexo-add-local-search/"/>
+    <id>https://blog.lopy.win/2018/10/30/2018-2018-10-30-hexo-add-local-search/</id>
+    <published>2018-10-30T10:58:13.000Z</published>
+    <updated>2018-10-30T11:12:55.552Z</updated>
     
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>abstract of win7 install vagrant</p><a id="more"></a><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>回头补，主要是遇到的错误要先记下来</p><h1 id="已知错误"><a href="#已知错误" class="headerlink" title="已知错误"></a>已知错误</h1><h2 id="powershell-版本太低"><a href="#powershell-版本太低" class="headerlink" title="powershell 版本太低"></a>powershell 版本太低</h2><ul><li><p>错误信息：</p><pre><code>The version of powershell currently installed on this host is less thanthe required minimum version. Please upgrade the installed version ofpowershell to the minimum required version and run the command again.</code></pre></li></ul><pre><code>Installed version: 2Minimum required version: 3</code></pre><ul><li><p>解决方法</p><pre><code># 参见微软官网https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx</code></pre><p>  但是，由于win7估计快被微软放弃了，不能装了。于是stackoverflow了一下。</p><pre><code>https://stackoverflow.com/questions/19902239/how-to-upgrade-powershell-version-from-2-0-to-3-0</code></pre><ol><li><p><a href="https://chocolatey.org/install" target="_blank" rel="noopener">Install Chocolatey</a></p><pre><code>## 打开cmd,在 cmd中写入以下命令@&quot;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&quot; -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command &quot;iex ((New-Object System.Net.WebClient).DownloadString(&apos;https://chocolatey.org/install.ps1&apos;))&quot; &amp;&amp; SET &quot;PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin&quot;</code></pre></li><li><p>Run the following commands in CMD</p><pre><code>choco install powershellchoco upgrade powershell</code></pre></li><li><p>restart your computer</p></li></ol></li></ul>]]></content>
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>为 hexo - next 增加搜索功能，方便快速定位</p><a id="more"></a><h1 id="源自链接"><a href="#源自链接" class="headerlink" title="源自链接"></a>源自链接</h1><blockquote><p><a href="https://segmentfault.com/a/1190000010881874" target="_blank" rel="noopener">https://segmentfault.com/a/1190000010881874</a></p></blockquote><h1 id="用自带的插件实现"><a href="#用自带的插件实现" class="headerlink" title="用自带的插件实现"></a>用自带的插件实现</h1><h2 id="安装-hexo-generator-search"><a href="#安装-hexo-generator-search" class="headerlink" title="安装 hexo-generator-search"></a>安装 hexo-generator-search</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure><h2 id="安装-hexo-generator-searchdb"><a href="#安装-hexo-generator-searchdb" class="headerlink" title="安装 hexo-generator-searchdb"></a>安装 hexo-generator-searchdb</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure><h2 id="启用搜索"><a href="#启用搜索" class="headerlink" title="启用搜索"></a>启用搜索</h2><p>修改hexo配置文件，在根目录下的_config.yml中增加如下配置：<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line"><span class="attr">  path:</span> <span class="string">search.xml</span></span><br><span class="line"><span class="attr">  field:</span> <span class="string">post</span></span><br><span class="line"><span class="attr">  format:</span> <span class="string">html</span></span><br><span class="line"><span class="attr">  limit:</span> <span class="number">10000</span></span><br></pre></td></tr></table></figure></p><h2 id="配置next中的搜索入口"><a href="#配置next中的搜索入口" class="headerlink" title="配置next中的搜索入口"></a>配置next中的搜索入口</h2><p>打开themes\next_config.yml，将local_search.enable 设为true</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Local search</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure><h2 id="运行测试一下"><a href="#运行测试一下" class="headerlink" title="运行测试一下"></a>运行测试一下</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;abstract of win7 install vagrant&lt;/p&gt;
+      &lt;p&gt;为 hexo - next 增加搜索功能，方便快速定位&lt;/p&gt;
     
     </summary>
     
+    
+      <category term="blog" scheme="https://blog.lopy.win/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>win7 安装vagrant</title>
+    <link href="https://blog.lopy.win/2018/10/29/2018-2018-10-29-win7-install-vagrant/"/>
+    <id>https://blog.lopy.win/2018/10/29/2018-2018-10-29-win7-install-vagrant/</id>
+    <published>2018-10-29T10:15:21.000Z</published>
+    <updated>2018-10-30T11:12:55.516Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>win7 安装vagrant，做为开发环境，但有时会出错。现将之记录下来。</p><a id="more"></a><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>回头补，主要是遇到的错误要先记下来</p><h1 id="已知错误"><a href="#已知错误" class="headerlink" title="已知错误"></a>已知错误</h1><h2 id="powershell-版本太低"><a href="#powershell-版本太低" class="headerlink" title="powershell 版本太低"></a>powershell 版本太低</h2><ul><li><p>错误信息：</p><pre><code>The version of powershell currently installed on this host is less thanthe required minimum version. Please upgrade the installed version ofpowershell to the minimum required version and run the command again.</code></pre></li></ul><pre><code>Installed version: 2Minimum required version: 3</code></pre><ul><li><p>解决方法</p><pre><code># 参见微软官网https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx</code></pre><p>  但是，由于win7估计快被微软放弃了，不能装了。于是stackoverflow了一下。</p><pre><code>https://stackoverflow.com/questions/19902239/how-to-upgrade-powershell-version-from-2-0-to-3-0</code></pre><ol><li><p><a href="https://chocolatey.org/install" target="_blank" rel="noopener">Install Chocolatey</a></p><pre><code>## 打开cmd,在 cmd中写入以下命令@&quot;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&quot; -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command &quot;iex ((New-Object System.Net.WebClient).DownloadString(&apos;https://chocolatey.org/install.ps1&apos;))&quot; &amp;&amp; SET &quot;PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin&quot;</code></pre></li><li><p>Run the following commands in CMD</p><pre><code>choco install powershellchoco upgrade powershell</code></pre></li><li><p>restart your computer</p></li></ol></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;win7 安装vagrant，做为开发环境，但有时会出错。现将之记录下来。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="develop" scheme="https://blog.lopy.win/tags/develop/"/>
     
   </entry>
   
@@ -435,28 +457,6 @@
       <category term="linux" scheme="https://blog.lopy.win/tags/linux/"/>
     
       <category term="error" scheme="https://blog.lopy.win/tags/error/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MarkDown初步尝试</title>
-    <link href="https://blog.lopy.win/2016/06/18/2016-2016-06-18-mark-down-learn/"/>
-    <id>https://blog.lopy.win/2016/06/18/2016-2016-06-18-mark-down-learn/</id>
-    <published>2016-06-17T16:00:01.000Z</published>
-    <updated>2018-10-30T10:41:52.000Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>从前blog移植过来，暂无摘要，后期再补</p><a id="more"></a><h2 id="1-一、-Title"><a href="#1-一、-Title" class="headerlink" title="1. 一、 Title"></a>1. 一、 Title</h2><ul><li>Title1<br>=</li></ul><p>通过在文字下方添加“=”表示一级标题。</p><pre><code>Title1=</code></pre><ul><li>Title2<br>-</li></ul><p>通过在文字下方添加“-”表示二级标题。</p><pre><code>Title2-</code></pre><ul><li><h3 id="Title3"><a href="#Title3" class="headerlink" title="Title3"></a>Title3</h3></li></ul><p>在文字开头加上 “#”，通过“#”数量表示几级标题。（一共只有1~6级标题，1级标题字体最大）</p><pre><code>### Title3</code></pre><h2 id="二、-有序列表"><a href="#二、-有序列表" class="headerlink" title="二、 有序列表"></a>二、 有序列表</h2><p>使用数字后面跟上句号。（还要有空格）<br>如：以下列表</p><ol><li>小红</li><li>小明</li><li>小白</li><li>小逼</li></ol><p>.</p><pre><code>1. 小红2. 小明3. 小白4. 小逼</code></pre><h2 id="三、无序列表"><a href="#三、无序列表" class="headerlink" title="三、无序列表"></a>三、无序列表</h2><p>在文字开头添加(*, +, -)和空格实现无序列表。</p><ul><li>小红</li><li>小黄</li></ul><ul><li>小马</li><li>小羊</li></ul><ul><li>小高</li><li>小美</li></ul><p>.</p><pre><code>- 小红- 小黄* 小马* 小羊+ 小高+ 小美</code></pre><h2 id="四、加粗，斜体"><a href="#四、加粗，斜体" class="headerlink" title="四、加粗，斜体"></a>四、加粗，斜体</h2><p>在文字开头和结尾加上 ** </p><p><strong>这是加粗的文字1</strong><br><strong>这是加粗的文字2</strong></p><p><em>这是斜体文字1</em><br><em>这是斜体文字2</em></p><p>.</p><pre><code>**这是加粗的文字1**__这是加粗的文字2__*这是斜体文字1*_这是斜体文字2_</code></pre><h2 id="五、图片"><a href="#五、图片" class="headerlink" title="五、图片"></a>五、图片</h2><p><img src="http://www.iconpng.com/png/phuzion/windows.png" alt="这是一张图片"></p><p>.</p><pre><code>![这是一张图片](http://www.iconpng.com/png/phuzion/windows.png)</code></pre><h2 id="六、文字链接"><a href="#六、文字链接" class="headerlink" title="六、文字链接"></a>六、文字链接</h2><ul><li>普通跳转 <a href="https://github.com/" target="_blank" rel="noopener">Github</a></li></ul><p>.</p><pre><code>[Github](https://github.com/)</code></pre><ul><li>target=’_blank’跳转 <a href="https://github.com/" target="_blank" rel="noopener">Github target _blank</a>{:target=”_blank”}</li></ul><p>.</p><pre><code>[Github](https://github.com/){:target=&quot;_blank&quot;}</code></pre><ul><li>邮箱链接 <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#50;&#x38;&#52;&#49;&#x34;&#49;&#x30;&#53;&#x30;&#64;&#x71;&#113;&#x2e;&#99;&#x6f;&#109;">&#50;&#x38;&#52;&#49;&#x34;&#49;&#x30;&#53;&#x30;&#64;&#x71;&#113;&#x2e;&#99;&#x6f;&#109;</a></li></ul><p>.</p><pre><code>&lt;284141050@qq.com&gt;</code></pre><h2 id="七、引用"><a href="#七、引用" class="headerlink" title="七、引用"></a>七、引用</h2><blockquote><p>这是一个引用<br>这是一个引用<br>这是一个引用</p><pre><code>这是另一个引用，&gt;后面有5个空格这是另一个引用，&gt;后面有5个空格这是另一个引用，&gt;后面有5个空格</code></pre></blockquote><p>.</p><pre><code>&gt; 这是一个引用&gt; 这是一个引用&gt; 这是一个引用&gt;     这是另一个引用，&gt;后面有5个空格&gt;     这是另一个引用，&gt;后面有5个空格&gt;     这是另一个引用，&gt;后面有5个空格</code></pre><h2 id="八、删除线"><a href="#八、删除线" class="headerlink" title="八、删除线"></a>八、删除线</h2><p><del>是不是有删除线</del></p><pre><code>~~是不是有删除线~~</code></pre><h2 id="九、分割线"><a href="#九、分割线" class="headerlink" title="九、分割线"></a>九、分割线</h2><h2 id=""><a href="#" class="headerlink" title="*"></a><em>*</em></h2><pre><code>***---</code></pre><h2 id="十、表格"><a href="#十、表格" class="headerlink" title="十、表格"></a>十、表格</h2><p>表1</p><p>姓名|性别|年龄|爱好<br>小红|女|28|没有<br>小明|男|21|考试<br>Jim Green|男|25|打飞机</p><p>表2</p><p>姓名|性别|年龄|爱好<br>|—|:—:|:—|—:|<br>小红|女|28|没有<br>小明|男|21|考试<br>Jim Green|男|25|打飞机</p><p>表3</p><p>姓名|性别|年龄|爱好<br>|—    |—    |—    |—    |<br>小红|女|28|没有<br>小明|男|21|考试<br>Jim Green|男|25|打飞机</p><pre><code>表1姓名|性别|年龄|爱好小红|女|28|没有小明|男|21|考试Jim Green|男|25|打飞机表2姓名|性别|年龄|爱好|---|:---:|:---|---:|小红|女|28|没有小明|男|21|考试Jim Green|男|25|打飞机表3姓名|性别|年龄|爱好|---    |---    |---    |---    |小红|女|28|没有小明|男|21|考试Jim Green|男|25|打飞机</code></pre><h2 id="sddff"><a href="#sddff" class="headerlink" title="sddff"></a>sddff</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;从前blog移植过来，暂无摘要，后期再补&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="lessons" scheme="https://blog.lopy.win/categories/lessons/"/>
-    
-    
-      <category term="md" scheme="https://blog.lopy.win/tags/md/"/>
     
   </entry>
   
