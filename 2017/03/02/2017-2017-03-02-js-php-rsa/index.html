@@ -1,0 +1,1852 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta name="baidu-site-verification" content="UqlC4pwKIm" />
+  <meta name="baidu-site-verification" content="d3U0dGeqGw" />
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="1C1XSuJ8TgM2O0mcZvsgzEdy0IdRZOJfxDYPyh18U9Q" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.cat.net/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="php,js,rsa," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="码奴假娃" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="从前blog移植过来，暂无摘要，后期再补  零、 后面一个实例，点击跳过前面的废话一、 javascript 加密 引入相关的js库   jsbn.js ,  prng4.js ,  rng4.js ,  rsa.js ,  base64.js   他们的远程目录为： http://www-cs-students.stanford.edu/~tjw/jsbn/ &amp;lt;script src=&amp;">
+<meta name="keywords" content="php,js,rsa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="rsa的js加密和php解密">
+<meta property="og:url" content="https://blog.lopy.win/2017/03/02/2017-2017-03-02-js-php-rsa/index.html">
+<meta property="og:site_name" content="码奴假娃">
+<meta property="og:description" content="从前blog移植过来，暂无摘要，后期再补  零、 后面一个实例，点击跳过前面的废话一、 javascript 加密 引入相关的js库   jsbn.js ,  prng4.js ,  rng4.js ,  rsa.js ,  base64.js   他们的远程目录为： http://www-cs-students.stanford.edu/~tjw/jsbn/ &amp;lt;script src=&amp;">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-30T09:38:05.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="rsa的js加密和php解密">
+<meta name="twitter:description" content="从前blog移植过来，暂无摘要，后期再补  零、 后面一个实例，点击跳过前面的废话一、 javascript 加密 引入相关的js库   jsbn.js ,  prng4.js ,  rng4.js ,  rsa.js ,  base64.js   他们的远程目录为： http://www-cs-students.stanford.edu/~tjw/jsbn/ &amp;lt;script src=&amp;">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://blog.lopy.win/2017/03/02/2017-2017-03-02-js-php-rsa/"/>
+
+
+
+
+
+  <title>rsa的js加密和php解密 | 码奴假娃</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-111723881-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">码奴假娃</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">裸皮狗</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.lopy.win/2017/03/02/2017-2017-03-02-js-php-rsa/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tony Java Z">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="码奴假娃">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">rsa的js加密和php解密</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-02T00:00:01+08:00">
+                2017-03-02
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-30T17:38:05+08:00">
+                2018-10-30
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web/" itemprop="url" rel="index">
+                    <span itemprop="name">web</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/03/02/2017-2017-03-02-js-php-rsa/" class="leancloud_visitors" data-flag-title="rsa的js加密和php解密">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2,102
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  11
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <script src="/assets/js/APlayer.min.js"> </script><hr>
+<p>从前blog移植过来，暂无摘要，后期再补</p>
+<hr>
+<h3 id="零、-后面一个实例，点击跳过前面的废话"><a href="#零、-后面一个实例，点击跳过前面的废话" class="headerlink" title="零、 后面一个实例，点击跳过前面的废话"></a>零、 后面一个实例，<a href="#四完整的实例">点击跳过前面的废话</a></h3><h3 id="一、-javascript-加密"><a href="#一、-javascript-加密" class="headerlink" title="一、 javascript 加密"></a>一、 javascript 加密</h3><ul>
+<li><p>引入相关的js库</p>
+<p>  jsbn.js ,<br>  prng4.js ,<br>  rng4.js ,<br>  rsa.js ,<br>  base64.js</p>
+<p>  他们的远程目录为： <a href="http://www-cs-students.stanford.edu/~tjw/jsbn/" target="_blank" rel="noopener">http://www-cs-students.stanford.edu/~tjw/jsbn/</a></p>
+<pre><code>&lt;script src=&quot;http://www-cs-students.stanford.edu/~tjw/jsbn/jsbn.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;http://www-cs-students.stanford.edu/~tjw/jsbn/prng4.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;http://www-cs-students.stanford.edu/~tjw/jsbn/rng.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;http://www-cs-students.stanford.edu/~tjw/jsbn/rsa.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;http://www-cs-students.stanford.edu/~tjw/jsbn/base64.js&quot;&gt;&lt;/script&gt;
+</code></pre><p>  本 blog 也拷贝了这几个库，网址的目录为： <a href="http://blog.lopy.win/assets/rsa/，将几个文件名加在后面就可以了。">http://blog.lopy.win/assets/rsa/，将几个文件名加在后面就可以了。</a></p>
+<p>  github地址：<a href="https://github.com/uljjmhn520/uljjmhn520.github.com/tree/master/assets/rsa" target="_blank" rel="noopener">https://github.com/uljjmhn520/uljjmhn520.github.com/tree/master/assets/rsa</a></p>
+<pre><code>//jquery 方便dom操作
+&lt;script src=&quot;//cdn.bootcss.com/jquery/2.1.3/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;http://blog.lopy.win/assets/rsa/jsbn.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;http://blog.lopy.win/assets/rsa/prng4.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;http://blog.lopy.win/assets/rsa/rng.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;http://blog.lopy.win/assets/rsa/rsa.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;http://blog.lopy.win/assets/rsa/base64.js&quot;&gt;&lt;/script&gt;
+</code></pre></li>
+</ul>
+<ul>
+<li><p>js 代码，第一部分</p>
+<pre><code>//创建一个rsa类，只有一个加密方法，构造函数为公钥中的 n 和 e 也就是模和指数。
+var MyRsa = function(module,eVal){
+    module = module || &apos;&apos;;
+    eVal = eVal || &apos;010001&apos;;
+    var rsaObj = new RSAKey();
+
+    //构造函数
+    var init = function(module,eVal){
+        if(module){
+            rsaObj.setPublic(module,eVal);
+        }
+    };
+    init(key,eVal);
+
+    //加密
+    this.encrypt = function(str){
+        var strEncoded = rsaObj.encrypt(str);
+        if(!strEncoded){
+            alert(&apos;hello what\&apos;s your name&apos;);
+            return false;
+        }
+        return hex2b64(strEncoded);
+    }
+}
+</code></pre></li>
+</ul>
+<ul>
+<li><p>js代码，第二部分</p>
+<pre><code>//n和e为rsa的模和指数，他们的值是从密钥对中获得的，后文会给出php 中获取的方法
+
+var n =&quot;E0F1E67A3E1E54B1820A481F1DFC98545542B85EAEC149627591593C19A25B3B6CDAAA9346D83EF695193FA268E3ED27C9B57DCFB5B6FB873D646FA3947105E4ACF07EDF623D321881D8930E0CFD391191F2EB3B3EB3DF2409F25B96B2BD4C5D2EAF42B43059D2FDDBAF5BE51E7F66E69B617FE319DFC2AD2567A841D765EB0DF5BAB631146EB6FD5688028658A0AEAF1CBD470BF437BCFA6641159E8C2F857B0C7D806326C6D3037DEAD1EC463673E0CA30D51EAF7F70EB7AFD46A765FB5FB4C89791A4CF4C4072E4D29D5DEDE90D75DC2D9669AEB888133F349179264EFF2DF0BCEFDA11FDAC32B57F75E2D2072ADC117DDAC3BEA8F431253228594BF0419B&quot;;
+var e = &apos;010001&apos;;
+
+var myRsa = new MyRsa(n,e);
+var encoded = myRsa.encrypt(&apos;hello world&apos;);
+console.log(encoded);
+
+// result，以下为结果之一，每次加密的结果都可能不一样
+
+// XJJeZhc4tYp50OXDAyBS6aK0lWOPNR6IVOM4auccxb+uk0+d5GewFq9ffAWhlBpAiRTuo1IbKm8e23UdU3kbIFs9nNAMCSdj/2FL3C9NrXlW67Jfs6azAMHMHKW3f3rXPCRMTvFGq09KdobwLiy71GidRZtbQYQEaZ8QhHpZC/QYem9EAdu4ULdBX5e1uigIPm3ukzK6RUKRbBYM44ApoL6kNUdbELvC2J6psqs1YxprwAw9D5C8N41tWFRwx7MIPx83TG8aGYDCU/q1E5Xd7fDpXlm4gZxPPXMHwIT4WJBvzDZoCCpxJSEYEzHzfF6HTTWcWo8BBbUeC8qssCHiyA==
+</code></pre></li>
+</ul>
+<h3 id="二、php-解密"><a href="#二、php-解密" class="headerlink" title="二、php 解密"></a>二、php 解密</h3><ul>
+<li><p>解密用的私钥，与加密用的公钥为一对，公钥可以用私钥生成，后文中会介绍</p>
+<pre><code>-----BEGIN PRIVATE KEY-----
+MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDg8eZ6Ph5UsYIK
+SB8d/JhUVUK4Xq7BSWJ1kVk8GaJbO2zaqpNG2D72lRk/omjj7SfJtX3Ptbb7hz1k
+b6OUcQXkrPB+32I9MhiB2JMODP05EZHy6zs+s98kCfJblrK9TF0ur0K0MFnS/duv
+W+Uef2bmm2F/4xnfwq0lZ6hB12XrDfW6tjEUbrb9VogChligrq8cvUcL9De8+mZB
+FZ6ML4V7DH2AYybG0wN96tHsRjZz4Mow1R6vf3Drev1Gp2X7X7TIl5Gkz0xAcuTS
+nV3t6Q113C2Waa64iBM/NJF5Jk7/LfC879oR/awytX914tIHKtwRfdrDvqj0MSUy
+KFlL8EGbAgMBAAECggEBAIWKtpRd6m3HT/dAp9CKk/iFAW4pL8AqC9zWJE7MvRlC
+ZzZNy89kM8T58RpZFcIymctjBsTYEUC0IhtNN6S5kJEYplH71fuUkP4NEAhoZ7CI
+oMfBJNPtvwxLJ2l+RrCg9DTx8Ty986WR9ejeOmBnrDQ9jJ16unKfxWEOb9JeyO/I
+pcuNi1+FKjCJDExNrEbPsiVdHK3tWI7a3lKVA6pTVSypjp3gLlbxwHpgVaEm+dak
+RFiPoyCoxYigQhsmnKp0ou+2qrJIl7b6NM+mfWD/o21zhAD3q/2vDfc5M661Uhlj
+Q/CvinB6P39Zs4gIhZa17AeZOXEgekcx/I068vLRKLkCgYEA9xaztzsvJTOQOjYX
+ZAaTssVO1VpDp9YbaXzLhrmc9HZVTgIiuDumKHrZ98r0yxQ21CszyJUEVbDSmVze
+hYnkMpC6lV03H8KuODNtjbeUkEw87g3+wiEuDAPUPHpVo/Afzxnd3kvH0dOKkMkY
+H09tuBbI7JXEbeJtxOuCxc7QCT0CgYEA6Q7AXNnerxcIcfBmFQR2HArmcIQcfmyx
+1D7USxwbub2kdSTd1Qr3pFbyPiqGmO2YjrvJCnXPH1ofq6gWWTH46Q0uxrNjp2Xn
+ZAPG03I+2gyGzs4ASSdFbDJwmQ6t0Pk253qArlzlcQgrGqtRS/4SzfivYiO6B27u
+aon8174Us7cCgYAYDsjOxV9wwtV/JXcfkRheZqGnWlOOCuW+Xp0+b+IdV0w0/TY+
+M+iYtmV0n/k3sK8p907ib8ftQ/stXYJ5BBUI61iPZHUSjZUC+dbn3oEDj7i7APfW
+FP7zwoeun8ao4J9oPb+BfmVlQ7CRKlND8Srgqq9Dgc2PWWWQr9GayuksjQKBgQCM
+Vr2vK+LUPGJxefl+nnkg2c954ZPm7T0IOe1MbVikuHXXtKOALmKBK3ojxSfX3vsG
+uD2PdvGKR5LaoxUSEO16KN4J+OwBWXPE3iFUIm+GjhR/Y7z4UBWV2anEAPrZ47gU
+G8hxNq9TKUALhy4lPJHGRgIWbr0OzNX0gbMnluaQcQKBgDyQeTvFpPuziNltPVm0
+BEbD6mSgHTky1i5w/k2UiR72tUHb3ekx98fPc0YHqczYbc7l8vP7mDO0+ZmtdFmq
+JjcixY3ZlvWeVjZ/QlI7wpgCy5hsgSRnxdy94IrLhrA5zlL0dDC0mAVzTPzJltIX
+QrbpjdKjcOCrdDny0WUw+OX4
+-----END PRIVATE KEY-----
+</code></pre></li>
+<li><p>php 代码部分</p>
+<pre><code>$privateStr = &apos;上文中的私钥&apos;;
+
+$pKey = openssl_pkey_get_private($privateStr);
+
+//encoded 为 上文js加密后的密文
+$encoded = base64_decode($encoded);
+
+openssl_private_decrypt($encoded,$decrypted,$pKey,OPENSSL_PKCS1_PADDING);
+
+echo $decrypted;
+//如果一切正常的话，就能解密出结果 hello world
+</code></pre></li>
+</ul>
+<h3 id="三、一些说明"><a href="#三、一些说明" class="headerlink" title="三、一些说明"></a>三、一些说明</h3><ul>
+<li><p>php 的openssl 扩展官网 <a href="http://php.net/manual/en/ref.openssl.php" target="_blank" rel="noopener">http://php.net/manual/en/ref.openssl.php</a></p>
+</li>
+<li><p>创建密钥对</p>
+<pre><code>$ssl = openssl_pkey_new([]);   
+</code></pre></li>
+<li><p>提取私钥</p>
+<pre><code>openssl_pkey_export($res, $privKey);
+
+//privKey 就为私钥 格式为 
+-----BEGIN PRIVATE KEY-----
+......
+-----END PRIVATE KEY-----
+</code></pre></li>
+<li><p>获取detail，包括公钥、模、指数等信息</p>
+<ul>
+<li><p>方式一，从密钥对里面提取</p>
+<pre><code>$detail = openssl_pkey_get_details($ssl);
+
+//公钥
+$publicKey = $detail[&apos;key&apos;];
+
+//模，值为二进制乱码，转为16进制
+$module = $detail[&apos;rsa&apos;][&apos;n&apos;];
+$module = bin2hex($module);
+
+//指数，值为二进制乱码，转为16进制
+$exponent = $detail[&apos;rsa&apos;][&apos;e&apos;];
+$exponent = bin2hex($exponent); //一般结果为 010001 （65537）
+</code></pre></li>
+<li><p>方式二，从私钥里提取</p>
+<pre><code>$privateKeySource = openssl_get_privatekey($privKey);
+$detail = openssl_pkey_get_details($privateKeySource);
+//后面取模、指数等信息同方式一
+</code></pre></li>
+<li><p>方式三，从公钥里提取</p>
+<pre><code>//$publicKey 为方式一中提取的 publicKey 
+$publicKeySource = openssl_get_publickey($publicKey);
+$publicKeyDetail = openssl_pkey_get_details($publicKeySource);
+//后面取模、指数等信息同方式一
+//从公钥里面提取的 detail 的内容较少
+</code></pre></li>
+</ul>
+</li>
+<li><p>解密</p>
+<pre><code>// $encoded 为已被加密的密文
+$encoded = base64_decode($encoded);
+
+//私钥 , 
+$pKey = openssl_pkey_get_private($privKey);
+
+//私钥解密
+openssl_private_decrypt($encoded,$decoded,$pKey,OPENSSL_PKCS1_PADDING);
+
+echo $decoded;
+</code></pre></li>
+</ul>
+<h3 id="四、完整的实例"><a href="#四、完整的实例" class="headerlink" title="四、完整的实例"></a>四、完整的实例</h3><blockquote>
+<p>以下内容基于 phalcon 的 controller ，如果你没有使用phalcon，可能会修改一部分代码</p>
+<pre><code>里面有三个action
+index：html 页面，包括js加密部分
+decode：php 解密部分，接收post数据，与页面index 的ajax交互
+create：rsa 要用到的一些基本函数，没多大用，就一些注释
+</code></pre></blockquote>
+<pre><code>&lt;?php
+/**
+ * @brief
+ * Created by PhpStorm.
+ * User: zy&amp;cs
+ * Date: 17-3-2
+ * Time: 上午11:47
+ */
+namespace App\Modules\Tester\Controllers;
+
+class RsaController extends ControllerBase
+{
+
+    /**
+     * 内置了几个私钥，用该方法获取一个，
+     *
+     * 可以自己用 createAction 自己往后面加，实际操作中用缓存或数据库就能解决了
+     *
+     *
+     * @param bool|int $key 默认取第一个，$key === false 时，取所有
+     * @return array
+     */
+    private function rsaPrivateKey($key=false)
+    {
+        $rsaKeys = [];
+
+        $rsaKeys[0] = &lt;&lt;&lt;rsakey
+-----BEGIN PRIVATE KEY-----
+MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDMYA9a+x7XxFh8
+Ihk9EK+6N0xZNq8qhBH5jypFO7zVvOHYPDjr1OAoKXYESDF5Yk+bbivXRY3Ptjbb
+QF2f0kNTkGBO0bwUmmDJ8RWs14uA+OyPmByHpBxRDLvddNNe3sj0GWbOKMXhSNQD
+zdu+U7vCtpjrHfKcoa8X5VjVln/A/gmQ4sCl3eQgeWcBciMV1AMY3b5Ez3ZuVM2C
+HNQl4dyGzMtEmSxOTT9oFFlDI64q+6QjlDOeo0cOD3lZDuR7x1knXWtLJtQ4v2Al
+8Ovoci6b33DApSRJJCFMclIhakIRHfmQxSANxu7L25OslJ0UhbOZEVoWm5hkkjrC
+h3opznJjAgMBAAECggEBAIFHgm8ayrfSC+b56t0l4QL6V+FXJhbO1E/4r9R7pUfO
+403VSmxjjCfbkjvDLwiJl7HKTxEtfjcWHD00ygR/DPefLEyvfznJLdCQIBXlguli
+jMGIhwOGXCMo2u2LKOmqI5PFPbLLN+D6IKMHZSlP7kWNG84ec4mA/TEwcrEpMkbx
+SaK7J5psPJ14OwRyj3Ok/Q7cF6jfqWmBKDVErHlsQHrqVVuq3Ik67u9E4bQvdgRC
+A+1z61ruu9pmyNhGBj0KsQCBU/e+4X1TpKVPgnBS/q2qLGT5JwL556Fax5xiT4Pj
+uFI607WXdjsl5Zi1pYbxTJBgJhfeUs64pRkwHzMp/4ECgYEA7b5PwkozKiYWFBzq
+JhutrykTTAZj+L4WomV3fwWNYJLboBX4fq7w4/rOP1xQtbtlSVeQxRV6+uka8QU5
+f+f+cH+/h2d/G0/ppwOPuavkW4pXhYNFlrJ6l9/KMG9Niw+R4Jrf09h47QgEXfjm
+uJfBlTnLb5FyvZ0miAcuabuhoh8CgYEA3BHHZPsDaJpSLaoN8RUYfbTyOU1kj4Pp
+4N7psZ5AKxZblBMPYubZMcR+accZ2TDlch4rZJBOyfay6Cw4ZzneKeUO5NI/hr2g
+Qh6Zd2ZpxHEE8SxYRDOOf3l8gP83aspLzL8KT/XNySJraRacaknXETiP+pNcKqFo
+zy0J3ujVDz0CgYBKnsM1/kgU4KNpaLHtiB55rfDKme7i8fb0vdhF3B5Fw5J/qqW2
+TX56cAwwQu9qOwlNfdiIo3dYLbYxFCy6Ar0P3mjlPQzeK7TwoOOJqXQhb0iNNWiw
+JhDofmtdzHGQRjDJSJMcUQOTkkKcpDT2l1tBVUSPHh3feeXQKEDfGu9ejQKBgQCR
+XYUSZORZgiZqV3wiFUc6Mf4Wb9LPIdmpWlWPp/LHA1u2sehl8grh3uOJx6SBXNUS
+zm7nXJNOwRBoYF1ZglYH4nA2IdMok7V6N3Az+IhA5E7ZZ+teEZg9B+h/5RWcCsiL
+FF4hd0JZa8z7e54Sb3gKvgwM/q3Q0xHCWAO/JJkoGQKBgQCXP+SGszS+YExHp+zO
+Bv1KRtv98YO9hZq9c+eXbVVbqEOo2/QM3G6joSdla7fD4SuEHA0MoEalgPkZ2teV
++Wsq/CbbrlZTTbdjMXuJu6VY7aKXG4nq3ZaU1cjxKSovP5S4NNueCNvUYWXp218E
+S19cTtlOxaiqzUFB6csgohAxwQ==
+-----END PRIVATE KEY-----
+rsakey;
+
+        $rsaKeys[1] = &lt;&lt;&lt;rsakey
+-----BEGIN PRIVATE KEY-----
+MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDETB/jy7cTG9SN
+EAgqh+wgIn7BCjBUGYP5po5oAYSsksQeMzBow2upsAw1JTizUwPyRhiuA7+WCUNg
+W65zh4Lj/gnjRa2SQWAx1PgUh5xhKJBKU84UPrPRt6CRL5HRdqL6vi0YU26lpewS
+HPC2TWVuXyQrKGPLCkcRG0gnWEyCN53Ua/zpYYas3gNr3Qs64ZT60VIGXdXktpbS
+ozdofOmI8rXUzzVJbj5ahlnGzTtM+XBtlDvY2Sb2sB3FjH6jXLyTdr26AcpuSRJQ
+ZAJffHBm1bZwWJszpVKYNP7bYpt/Ey5uCuJUNq/XlNlmKKN5H9mzG2UITirduxRv
+vfV+QzVDAgMBAAECggEAdKO/Nz5vVF1vGTrzf0Iw3o9gvhfty6s1rnx3lfmA+oJj
+IobMNxQXv0aqmlG5tWSYrbdVJuF3UBHFBVa0/FUDQ7JJ8dAPaR6LqFCh8KD8HQdb
+Za8SfxkbBHyWXm7juJFEGrYyWYgJ8Uf8VG754Xlv0fuapEJludorjFCnuSlQnPag
+tw6t3tcj/BzbXTrrGi6V36vm9lkg4qrdozJcYl9cIXs/SAdWUX5jIkCAHVSrNoKA
+LSwylPeNMSVzJu3o6ivj4OPfn6/HuNZZ3Z18O/veNB13B4xb4M9f7RduQQFNC9Bq
+qH8nyfRiYtFFFj3SRfmF74GJCYe3xP4MDB3PV5DpUQKBgQDnpt1qqPiVbuaL4Kro
+a3b62u66RZnZxGCvvpaBeP7+cx69RGwcXxfYRNVSQ3VRbChuhsbw9UWrFY+akOT7
+5QLCorxpyaSiYkv0aHpFqjWX9IaKY3PJN7hq7VICHTRehdpiNpp1Y092HWz6+qxn
+4h8D4+bTmyQmU7S5gvfc5H00xwKBgQDY7fcXAfbuxnKw8j8BZQAhkjF2RvN0DGD/
+Uocee06LKrXzGWwP0ydCismxL50DvsddmJ92CEHqBtf8zoq32MlMTlCyBvSmFx/Z
+PEKalHxNlHuDDjnMSI4yYhd9losFhagXI767Uhce28AiNoHKd8dXM+8NY77QxZJ9
+g/yzyatHpQKBgA1vbx4ViL1Z/kMUl7T9LpxkAD6LdN3dduIagq4lr1xgnuLJSh/n
+IAHqFBk+UlqTlFC8vmMRRqYijP6g8rbtVFiniZf1GvhUDSWyvYy2z37trrPuCrQb
+6DVDaGM5AGWPC9hwZEr0pJIsKLrxuPgZdEUMfcG+GL2kUzIDN473LY/XAoGANcji
+f5DcIZ2QaDDX0EezfZ9apiG3UOmUzxkuKS+XbMfdLvX5pf7LeCMjGMxeWMRfd+RU
+fRZVCWpC+QpYuHaGimXMeidhVyDao6jeNqdkHnQXH4pSaEUBBJrvihLeSzM1Vu9k
+5drXoq4HeDQdgA6snQFiXuaBNBAYXwhvikAROIUCgYEA3SkKhaZVXgsfIQpKwR1F
+WrTgh1976+40ZY8a1Ktg9W7HJm8FmyEcsgnZxVM0IMVZ4W6LS1HboNL3XR0C7UtC
+Ga/EXZWqau7eMuob1lz9MyxQMYtiNKRBpGrJyo9HoFjS1M4xVGyVq0C6V3SplMB4
+vjjY7Snq6YKVk8Rw770Tnus=
+-----END PRIVATE KEY-----
+rsakey;
+
+        $rsaKeys[2] = &lt;&lt;&lt;rsakey
+-----BEGIN PRIVATE KEY-----
+MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDg8eZ6Ph5UsYIK
+SB8d/JhUVUK4Xq7BSWJ1kVk8GaJbO2zaqpNG2D72lRk/omjj7SfJtX3Ptbb7hz1k
+b6OUcQXkrPB+32I9MhiB2JMODP05EZHy6zs+s98kCfJblrK9TF0ur0K0MFnS/duv
+W+Uef2bmm2F/4xnfwq0lZ6hB12XrDfW6tjEUbrb9VogChligrq8cvUcL9De8+mZB
+FZ6ML4V7DH2AYybG0wN96tHsRjZz4Mow1R6vf3Drev1Gp2X7X7TIl5Gkz0xAcuTS
+nV3t6Q113C2Waa64iBM/NJF5Jk7/LfC879oR/awytX914tIHKtwRfdrDvqj0MSUy
+KFlL8EGbAgMBAAECggEBAIWKtpRd6m3HT/dAp9CKk/iFAW4pL8AqC9zWJE7MvRlC
+ZzZNy89kM8T58RpZFcIymctjBsTYEUC0IhtNN6S5kJEYplH71fuUkP4NEAhoZ7CI
+oMfBJNPtvwxLJ2l+RrCg9DTx8Ty986WR9ejeOmBnrDQ9jJ16unKfxWEOb9JeyO/I
+pcuNi1+FKjCJDExNrEbPsiVdHK3tWI7a3lKVA6pTVSypjp3gLlbxwHpgVaEm+dak
+RFiPoyCoxYigQhsmnKp0ou+2qrJIl7b6NM+mfWD/o21zhAD3q/2vDfc5M661Uhlj
+Q/CvinB6P39Zs4gIhZa17AeZOXEgekcx/I068vLRKLkCgYEA9xaztzsvJTOQOjYX
+ZAaTssVO1VpDp9YbaXzLhrmc9HZVTgIiuDumKHrZ98r0yxQ21CszyJUEVbDSmVze
+hYnkMpC6lV03H8KuODNtjbeUkEw87g3+wiEuDAPUPHpVo/Afzxnd3kvH0dOKkMkY
+H09tuBbI7JXEbeJtxOuCxc7QCT0CgYEA6Q7AXNnerxcIcfBmFQR2HArmcIQcfmyx
+1D7USxwbub2kdSTd1Qr3pFbyPiqGmO2YjrvJCnXPH1ofq6gWWTH46Q0uxrNjp2Xn
+ZAPG03I+2gyGzs4ASSdFbDJwmQ6t0Pk253qArlzlcQgrGqtRS/4SzfivYiO6B27u
+aon8174Us7cCgYAYDsjOxV9wwtV/JXcfkRheZqGnWlOOCuW+Xp0+b+IdV0w0/TY+
+M+iYtmV0n/k3sK8p907ib8ftQ/stXYJ5BBUI61iPZHUSjZUC+dbn3oEDj7i7APfW
+FP7zwoeun8ao4J9oPb+BfmVlQ7CRKlND8Srgqq9Dgc2PWWWQr9GayuksjQKBgQCM
+Vr2vK+LUPGJxefl+nnkg2c954ZPm7T0IOe1MbVikuHXXtKOALmKBK3ojxSfX3vsG
+uD2PdvGKR5LaoxUSEO16KN4J+OwBWXPE3iFUIm+GjhR/Y7z4UBWV2anEAPrZ47gU
+G8hxNq9TKUALhy4lPJHGRgIWbr0OzNX0gbMnluaQcQKBgDyQeTvFpPuziNltPVm0
+BEbD6mSgHTky1i5w/k2UiR72tUHb3ekx98fPc0YHqczYbc7l8vP7mDO0+ZmtdFmq
+JjcixY3ZlvWeVjZ/QlI7wpgCy5hsgSRnxdy94IrLhrA5zlL0dDC0mAVzTPzJltIX
+QrbpjdKjcOCrdDny0WUw+OX4
+-----END PRIVATE KEY-----
+rsakey;
+
+        $rsaKeys[3] = &lt;&lt;&lt;rsakey
+-----BEGIN PRIVATE KEY-----
+MIIBUwIBADANBgkqhkiG9w0BAQEFAASCAT0wggE5AgEAAkEA0ZJCQOOdXAGtSN1W
+MBNQp27kzLC7qE275nNgJsxk7VN2okNDPoTyn2jKO66VSy6j2Jgnsa2Ivd8w0kZQ
+s96viwIDAQABAkANFdDFNHES2Zf0QL2s6sfSbH4kubQ94fyleva59XEn0D1RtQou
+ELkG8ziIYbqucTMJm5IkyR7wFYDCDuGgDU6BAiEA9hRhdeQfdwLzNUQfrReNEScL
+LhDMGbDqVsEvu8ik8zsCIQDaBRndLKubqbTtE/HP6tFG8bNHLpCfRbv+YTBgbyvP
+8QIgfdbKSClSVd/yU2j08eU7RGw88V+xn+myzI6aRGNExwUCIHBIIEHgN6E7jYpr
+syW5cX5wDDykpqbgaylfNGL13kKBAiAZwTtHJmMuApSOrdesqoeNMOqKhoDgyNZy
+GbnWQa+Dxg==
+-----END PRIVATE KEY-----
+rsakey;
+
+        $rsaKeys[4] = &lt;&lt;&lt;rsakey
+-----BEGIN PRIVATE KEY-----
+MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAMpVIE75OR2lftwn
+U2WXszG5YPCxZno7Q2cdfpXQ2aW69hcdjiQDgBeVfSngRtrK2lXlkiBw5wIuK9MI
+e0jL1tatPRJ+/kHSnQadh01NpHsz/FiMQsJ8jOdfP2zhCO6F6p6cgTH7ccSp3AHq
+XvmGIPZByba5N3KVgqSayux4cDQhAgMBAAECgYArPA1vUqn1v8tf17dmWggcc/RW
++lFfhRJeElteQAaB93VmcxZQc78HSxY3wIjjb70/5ZJYBEgYmy0aJxHQ+F2rmE7J
+viFtDUNp3wC64juvntuSoEOBjmjYVYhfNHOvoVrh/Lh8/8cj5bba2D2/G0h+DAhC
+NuHDA2yesAmUm3icEQJBAPROBPTAHSdAh46osdpnjFp1skrsK5ZAzvLzvNGA9WtO
+581u7cbKdmfKZOa/0G3grOtC9reRovNxHzyLqhcD9HMCQQDUBLuNsdZOfOe5fRnl
+oH3Bs/U63VHpGuhD619kX3ZFC9J0yykSk37eWm6+lXJ9iEmMOpbIByzEzt5FvxCQ
+teQbAkBk0gXNk7L0Tfcjco7jWTRc6JGJxek++sPtE5VqyFN/03JqH0tVbJxsvOPj
+LmmvzrbN6Da1Dw82dAq2C9VH5kPtAkAE18rU9L/5cP72DLZ/uUfGGe87Ff0d/wBZ
+NNIr/8Y604dOJandg8L9H0GyVsWTun47lscE8K0EHdmT7EZbl9wLAkEA5vV71Jk8
+zxGDhpDdqmviFDTMGjl2zQwIh8AW+OL+R1GAlsJlcWy0E4C6lm3xohv5vO1V9Png
+nWMKYJf8FW2DvA==
+-----END PRIVATE KEY-----
+rsakey;
+
+        $rsaKeys[5] = &lt;&lt;&lt;rsakey
+-----BEGIN PRIVATE KEY-----
+MIIBFAIBADANBgkqhkiG9w0BAQEFAASB/zCB/AIBAAIzAVKoys24WgfliPeAh2LH
+vhFEQ1KmxEETTrOwjSLtYFgA6opEvcND4Hie61syD3i/g7sBAgMBAAECMwDfbilP
+DH+pkhCJaizoSOvnLGhWUVxNqtVSKTXJX/Nri/a5Ye3sr+ZZIaCcxZCeBOejIQIa
+AbPKiMN2IzV+WpDMr9zspM1Khz2Hy3y0hKUCGgDG8O8syaInZ7/qdrn2/1TIuZkO
+CkE4+KItAhlgyLtlBai+Kai9fegU3a2gNkwg2zbTJFhNAhkyNURnrUu7XjfVWLl+
+WNpw/kZegMANPNLRAhoBgZPB6KHFUtqcodgnJvRkyt8wVlUk0Lx6Qg==
+-----END PRIVATE KEY-----
+rsakey;
+
+
+
+        if($key === false){
+            return $rsaKeys;
+        }
+
+        if (!isset($rsaKeys[$key])) {
+            $key=0;
+        }
+
+        return $rsaKeys[$key];
+    }
+
+    /**
+     * @param $id
+     * @return array
+     */
+    private function getDetailFromPKId($id)
+    {
+        $key = $this-&gt;rsaPrivateKey($id);
+        $resource = openssl_get_privatekey($key);
+        return  openssl_pkey_get_details($resource);;
+    }
+
+
+    private function getHtml($keyId,$rsaModule,$rsaExponent)
+    {
+
+        //rsa 的那几个js
+        $rsaAssets = [
+            &apos;jsbn.js&apos;,
+            &apos;prng4.js&apos;,
+            &apos;rng.js&apos;,
+            &apos;rsa.js&apos;,
+            &apos;base64.js&apos;,
+        ];
+        $rsaJsPre = &apos;http://blog.lopy.win/assets/rsa/&apos;;
+        $rsaJs = &apos;&apos;;
+        foreach($rsaAssets as $val){
+            $rsaJs .= &apos;&lt;script src=&quot;&apos; . $rsaJsPre . $val . &apos;&quot;&gt;&lt;/script&gt;&apos;;
+        }
+
+
+        //切换 privateKey
+        $switchStr = &apos;&apos;;
+        foreach($this-&gt;rsaPrivateKey() as $key=&gt;$val)
+        {
+            $switchStr .= &apos;&lt;li&gt;&lt;a href=&quot;index?key_id=&apos; . $key . &apos;&quot;&gt;密钥 - &apos; . $key . &apos; &lt;/a&gt;&lt;/li&gt;&apos;;
+        }
+
+
+        //密钥长度
+        $moduleLength = strlen($rsaModule) * 8 / 2; //为毛要除以2 ，因为 bin2hex 后，长度为两倍
+
+        //html 代码
+        $html = &lt;&lt;&lt;html
+&lt;html&gt;
+&lt;head&gt;
+&lt;script src=&quot;//cdn.bootcss.com/jquery/2.1.3/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+$rsaJs
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script&gt;
+    //class rsa
+    var MyRsa = function(key,eVal){
+        key = key || &apos;&apos;;
+        eVal = eVal || &apos;010001&apos;;
+        var rsaObj = new RSAKey();
+
+        var init = function(key,eVal){
+            if(key){
+                rsaObj.setPublic(key,eVal);
+            }
+        };
+
+        this.encrypt = function(str){
+            var strEncoded = rsaObj.encrypt(str);
+            if(!strEncoded){
+                alert(&apos;hello what\&apos;s your name&apos;);
+                return false;
+            }
+            return hex2b64(strEncoded);
+        }
+        init(key,eVal);
+    }
+    function submitCheck(){
+        var rsaModule = &quot;$rsaModule&quot;;
+        var rsaExponent = &quot;$rsaExponent&quot;;
+
+        var myRsa = new MyRsa(rsaModule,rsaExponent);
+        $(&quot;[name=input]&quot;).val(myRsa.encrypt($(&quot;#input&quot;).val()));
+        var url = &quot;decode&quot;;
+        var data ={
+            key_id:$(&quot;[name=key_id]&quot;).val(),
+            input:$(&quot;[name=input]&quot;).val(),
+        };
+        $.post(url,data,function(json){
+            if(json.flag ===0){
+                $(&apos;#decoded&apos;).val(json.decoded);
+            }else{
+                alert(json.msg);
+            }
+        });
+        return false;
+    }
+&lt;/script&gt;
+&lt;style&gt;
+    input.full{
+        width: 100%;
+    }
+&lt;/style&gt;
+
+&lt;ul&gt;$switchStr&lt;/ul&gt;
+
+&lt;form action=&quot;#&quot; method=&quot;post&quot;&gt;
+    &lt;ul&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;key_id&quot; value=&quot;$keyId&quot;&gt;
+
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;密钥长度&lt;/li&gt;
+        &lt;li&gt;
+            &lt;input type=&quot;text&quot; readonly value=&quot;$moduleLength&quot; class=&quot;full&quot;&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;模（n）&lt;/li&gt;
+        &lt;li&gt;
+            &lt;input type=&quot;text&quot; readonly value=&quot;$rsaModule&quot; class=&quot;full&quot;&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;指数（e）&lt;/li&gt;
+        &lt;li&gt;
+            &lt;input type=&quot;text&quot; readonly value=&quot;$rsaExponent&quot; class=&quot;full&quot;&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;输入要加密的字符串：&lt;/li&gt;
+        &lt;li&gt;
+            &lt;input type=&quot;text&quot; id=&quot;input&quot; class=&quot;full&quot;&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;js加密后&lt;/li&gt;
+        &lt;li&gt;
+            &lt;input type=&quot;text&quot; name=&quot;input&quot; readonly class=&quot;full&quot;&gt;
+        &lt;/li&gt;
+
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;php解密后&lt;/li&gt;
+        &lt;li&gt;&lt;input type=&quot;text&quot; id=&quot;decoded&quot; readonly class=&quot;full&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;button type=&quot;submit&quot; onclick=&quot;return submitCheck();&quot;&gt;encode &amp;&amp; decode&lt;/button&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+html;
+
+        return $html;
+    }
+
+    /**
+     *
+     * @return bool
+     */
+    public function indexAction()
+    {
+        $keyId = $this-&gt;request-&gt;get(&apos;key_id&apos;,&apos;int&apos;,0);
+        $keyId = $keyId &lt; 0 ? 0 : $keyId;
+
+        //取一个私钥 private key
+        $detail = $this-&gt;getDetailFromPKId($keyId);
+
+        //取得该密钥对的 模 和指数，也是 n 和 e
+        $rsaModule = strtoupper(bin2hex($detail[&apos;rsa&apos;][&apos;n&apos;]));
+
+        $rsaExponent = bin2hex($detail[&apos;rsa&apos;][&apos;e&apos;]);
+
+        //输出html
+        echo $this-&gt;getHtml($keyId, $rsaModule, $rsaExponent);
+
+        return false;
+    }
+
+
+    /**
+     * @return bool
+     */
+    public function decodeAction()
+    {
+        //post 参数
+        $keyId = $this-&gt;request-&gt;getPost(&apos;key_id&apos;, &apos;int&apos;, 0);
+        $input = $this-&gt;request-&gt;getPost(&apos;input&apos;, [&apos;string&apos;, &apos;trim&apos;], &apos;&apos;);
+        $json = [
+            &apos;flag&apos; =&gt; 1,
+            &apos;msg&apos;  =&gt; &apos;&apos;
+        ];
+
+
+        if($keyId &lt; 0){
+            $json[&apos;msg&apos;] = &apos;what\&apos;s your name?&apos;;
+        }else if(!$input){
+            $json[&apos;msg&apos;] = &apos;how old are you&apos;;
+        }else{
+            $str = base64_decode($input);
+
+            //私钥
+            $pKey = openssl_pkey_get_private($this-&gt;rsaPrivateKey($keyId));
+
+            //私钥解密
+            openssl_private_decrypt($str,$decrypted,$pKey,OPENSSL_PKCS1_PADDING);
+
+            //结果
+            $json[&apos;flag&apos;] = 0;
+            $json[&apos;decoded&apos;] = $decrypted;
+        }
+
+        $this-&gt;response-&gt;setJsonContent($json);
+        return false;
+    }
+
+
+    //test
+    public function createAction()
+    {
+        echo &apos;&lt;pre&gt;&apos;;
+        //创建密钥对
+        //$rsaPair = openssl_pkey_new([]);
+
+        $rsaPair = openssl_pkey_new([
+            &apos;private_key_bits&apos;=&gt;401
+        ]);
+
+        //get 私钥
+        openssl_pkey_export($rsaPair, $privateKey);
+
+        var_dump($privateKey);
+
+        // get detail of private key
+        //array(
+        //  bits    位数
+        //  key 公钥
+        //  rsa =&gt; array(
+        //      n 模
+        // 。。。。。。
+        //  )
+        //  type
+        //)
+        $privateKeyDetail = openssl_pkey_get_details($rsaPair);
+
+        /*
+        //这样也行，两种方法
+        $privateKeySource = openssl_get_privatekey($privateKey);
+        $privateKeyDetail = openssl_pkey_get_details($privateKeySource);
+        */
+
+        //ob_clean();var_dump($privateKeyDetail);return false;
+        //get 公钥 public key
+        var_dump($privateKeyDetail[&apos;key&apos;]);
+
+
+        var_dump(&apos;------------------------------------------ private key start ------------------------------------------&apos;);
+        //模 n ，一般用hex 显示
+        var_dump(strtoupper(bin2hex($privateKeyDetail[&apos;rsa&apos;][&apos;n&apos;])));
+        //指数 e
+
+        var_dump(bin2hex($privateKeyDetail[&apos;rsa&apos;][&apos;e&apos;]));
+
+        var_dump(strtoupper(bin2hex($privateKeyDetail[&apos;rsa&apos;][&apos;d&apos;])));
+
+        var_dump(&apos;------ p and q ------&apos;);
+        var_dump((bin2hex($privateKeyDetail[&apos;rsa&apos;][&apos;p&apos;])));
+        var_dump((bin2hex($privateKeyDetail[&apos;rsa&apos;][&apos;q&apos;])));
+
+        var_dump(&apos;------------------------------------------ private key end ------------------------------------------&apos;);
+        var_dump(&apos;&apos;);
+
+
+        var_dump(&apos;------------------------------------------ public key start ------------------------------------------&apos;);
+        //也可以用public key 获取 detail
+        //public 的 detail 里面的 rsa 的东西要少些
+        $publicKeySource = openssl_get_publickey($privateKeyDetail[&apos;key&apos;]);
+        $publicKeyDetail = openssl_pkey_get_details($publicKeySource);
+
+        var_dump(strtoupper(bin2hex($publicKeyDetail[&apos;rsa&apos;][&apos;n&apos;])));
+        var_dump(bin2hex($privateKeyDetail[&apos;rsa&apos;][&apos;e&apos;]));
+
+        var_dump(&apos;------------------------------------------ public key end ------------------------------------------&apos;);
+        var_dump($publicKeyDetail);
+
+
+        echo &apos;&lt;/pre&gt;&apos;;
+        return false;
+
+    }
+}
+</code></pre><p>rsa<br><a href="http://www-cs-students.stanford.edu/~tjw/jsbn/" target="_blank" rel="noopener">http://www-cs-students.stanford.edu/~tjw/jsbn/</a></p>
+<p>demo<br><a href="http://www-cs-students.stanford.edu/~tjw/jsbn/rsa.html" target="_blank" rel="noopener">http://www-cs-students.stanford.edu/~tjw/jsbn/rsa.html</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Tony Java Z
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://blog.lopy.win/2017/03/02/2017-2017-03-02-js-php-rsa/" title="rsa的js加密和php解密">https://blog.lopy.win/2017/03/02/2017-2017-03-02-js-php-rsa/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/php/" rel="tag"># php</a>
+          
+            <a href="/tags/js/" rel="tag"># js</a>
+          
+            <a href="/tags/rsa/" rel="tag"># rsa</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/20/2017-2017-02-20-debian-realtek-driver/" rel="next" title="debian realtek 无线网卡安装">
+                <i class="fa fa-chevron-left"></i> debian realtek 无线网卡安装
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/17/2017-2017-03-17-debian-run-graphics-program-at-root/" rel="prev" title="debian 以root权限运行图形程序">
+                debian 以root权限运行图形程序 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Tony Java Z" />
+            
+              <p class="site-author-name" itemprop="name">Tony Java Z</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+			<!--my custom code begin-->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+			<script type="text/javascript">
+			  $("#sidebar").hover(function(){
+				$("#mydivshow").velocity('stop').velocity({opacity: 1});
+			  },function(){
+				$("#mydivshow").velocity('stop').velocity({opacity: 0});
+			  });
+			</script>
+			<div id="mydivshow" class="mydivshow">
+			<!--my custom code end-->
+			
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/yourname" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://gitee.com/yourname" target="_blank" title="Gitee">
+                    
+                      <i class="fa fa-fw fa-glide"></i>Gitee</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:yourname @gmail.com" target="_blank" title="E-Mail">
+                    
+                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://plus.google.com/" target="_blank" title="Google">
+                    
+                      <i class="fa fa-fw fa-google"></i>Google</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.weibo.com/" target="_blank" title="微博">
+                    
+                      <i class="fa fa-fw fa-weibo"></i>微博</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.zhihu.com/people/yourname" target="_blank" title="知乎">
+                    
+                      <i class="fa fa-fw fa-bell"></i>知乎</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://blog.csdn.net/u011475210" title="CSDN博客主页" target="_blank">CSDN博客主页</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://wordzzzz.gitee.io" title="中国站主页" target="_blank">中国站主页</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://wordzzzz.github.io" title="全球站主页" target="_blank">全球站主页</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          <div id="player1" class="aplayer"></div>
+<script src="/js/src/APlayer.min.js"></script>
+<script type="text/javascript">
+var ap = new APlayer({
+    element: document.getElementById('player1'),                       // Optional, player element
+    narrow: false,                                                     // Optional, narrow style
+    autoplay: false,                                                    // Optional, autoplay song(s), not supported by mobile browsers
+    showlrc: 0,                                                        // Optional, show lrc, can be 0, 1, 2, see: ###With lrc
+    mutex: true,                                                       // Optional, pause other players when this player playing
+    theme: '#e6d0b2',                                                  // Optional, theme color, default: #b7daff
+    mode: 'random',                                                    // Optional, play mode, can be `random` `single` `circulation`(loop) `order`(no loop), default: `circulation`
+    preload: 'metadata',                                               // Optional, the way to load music, can be 'none' 'metadata' 'auto', default: 'auto'
+    listmaxheight: '513px',                                             // Optional, max height of play list
+    music: {                                                           // Required, music info, see: ###With playlist
+        title: '你曾是少年',                                          // Required, music title
+        author: 'cover',                          // Required, music author
+        url: 'http://mp3.qqmusic.cc/yq/102426570.mp3',  // Required, music url
+        pic: '/images/visitor.jpg',  // Optional, music picture
+    }
+});
+</script>
+        </div>
+		<!--my custom code begin-->
+		</div>
+		<!--my custom code end-->
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#零、-后面一个实例，点击跳过前面的废话"><span class="nav-number">1.</span> <span class="nav-text">零、 后面一个实例，点击跳过前面的废话</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一、-javascript-加密"><span class="nav-number">2.</span> <span class="nav-text">一、 javascript 加密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、php-解密"><span class="nav-number">3.</span> <span class="nav-text">二、php 解密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、一些说明"><span class="nav-number">4.</span> <span class="nav-text">三、一些说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、完整的实例"><span class="nav-number">5.</span> <span class="nav-text">四、完整的实例</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tony Java Z</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">34.9k</span>
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("", "");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+  
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.3"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/exturl.js?v=5.1.3"></script>
+
+
+  <script src="/js/src/Aplayer-Controler.js"></script>
+<div id="AP-controler"></div>
+<script type="text/javascript">
+var myapc=new APlayer_Controler({
+		APC_dom:$('#AP-controler'),
+		aplayer:ap, //此为绑定的aplayer对象
+		attach_right:false,
+		position:{top:'300px',bottom:''},
+		fixed:true,
+		btn_width:100,
+		btn_height:120,
+		img_src:['http://oty1v077k.bkt.clouddn.com/bukagirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/jumpgirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/pentigirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/%E8%90%8C1.gif'],
+		img_style:{repeat:'no-repeat',position:'center',size:'contain'},
+		ctrls_color:'rgba(173,255,47,0.8)',
+		ctrls_hover_color:'rgba(255,140,0,0.7)',
+		tips_on:true,
+		tips_width:140,
+		tips_height:25,
+		tips_color:'rgba(255,255,255,0.6)',
+		tips_content:{},
+		timeout:30
+	});
+</script>
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+
+
+
+</body>
+</html>
