@@ -4,23 +4,23 @@
 
     
   <url>
-    <loc>https://blog.lopy.win/2016/03/01/2016-2016-03-01-collect-cdn-source/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <loc>https://blog.lopy.win/2017/03/22/2017-2017-03-22-swoole-httpserver-attention/</loc>
+    <lastmod>2018-10-30T10:47:23.444Z</lastmod>
     <data>
         <display>
-        <title>收集一些cdn公共库</title>
-        <pubTime>2016-02-29T16:00:01.000Z</pubTime>
+        <title>swoole 做 httpserver 整合phalcon </title>
+        <pubTime>2017-03-21T16:00:02.000Z</pubTime>
         
-        <tag>cdn</tag>
+        <tag>php</tag>
          
-        <tag>js</tag>
+        <tag>phalcon</tag>
          
-        <tag>css</tag>
+        <tag>swoole</tag>
          
          
            
              
-              <breadCrumb title="web" url="https://blog.lopy.win/categories/web/"/>
+              <breadCrumb title="@web" url="https://blog.lopy.win/categories/web/"/>
           
         </display>
     </data>
@@ -29,7 +29,7 @@
     
   <url>
     <loc>https://blog.lopy.win/2015/02/20/2015-2015-02-20-debian-install-fcitx-wubi/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
         <title>debian 安装fcitx五笔拼音</title>
@@ -52,28 +52,8 @@
 
     
   <url>
-    <loc>https://blog.lopy.win/2015/03/20/2015-2015-03-20-mysql-updateupdate/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>MySql更新多条数据不建议使用UPDATE语句</title>
-        <pubTime>2015-03-19T16:00:01.000Z</pubTime>
-        
-        <tag>mysql</tag>
-         
-         
-           
-             
-              <breadCrumb title="web" url="https://blog.lopy.win/categories/web/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://blog.lopy.win/2015/03/29/2015-2015-03-29-linux-iptables-setup/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
         <title>Linux中iptables设置详细</title>
@@ -94,28 +74,8 @@
 
     
   <url>
-    <loc>https://blog.lopy.win/2015/05/19/2015-2015-05-19-debian-apt-source/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>我的debian常用apt源</title>
-        <pubTime>2015-05-18T16:00:01.000Z</pubTime>
-        
-        <tag>debian</tag>
-         
-         
-           
-             
-              <breadCrumb title="other" url="https://blog.lopy.win/categories/other/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://blog.lopy.win/2015/05/26/2015-2015-05-26-mysqli-learn/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
         <title>mysqli的参数化查询，学习一下，马上就用</title>
@@ -139,7 +99,7 @@
     
   <url>
     <loc>https://blog.lopy.win/2015/05/29/2015-2015-05-29-zhengzebug/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
         <title>正则表达式\w并不完全等于[A-Za-z0-9]</title>
@@ -160,74 +120,8 @@
 
     
   <url>
-    <loc>https://blog.lopy.win/2015/06/18/2015-2015-06-18-debian-set-timezone/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>debian 修改时区</title>
-        <pubTime>2015-06-17T16:00:01.000Z</pubTime>
-        
-        <tag>debian</tag>
-         
-        <tag>timezone</tag>
-         
-         
-           
-             
-              <breadCrumb title="other" url="https://blog.lopy.win/categories/other/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.lopy.win/2015/07/22/2015-2015-07-22-debian-install-composer/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>deban安装composer</title>
-        <pubTime>2015-07-21T16:00:01.000Z</pubTime>
-        
-        <tag>debian</tag>
-         
-        <tag>php</tag>
-         
-        <tag>composer</tag>
-         
-         
-           
-             
-              <breadCrumb title="web" url="https://blog.lopy.win/categories/web/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.lopy.win/2015/08/11/2015-2015-08-11-shadowsocks-config/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>shadowsocks常用配置</title>
-        <pubTime>2015-08-10T16:00:01.000Z</pubTime>
-        
-        <tag>shadowsocks</tag>
-         
-         
-           
-             
-              <breadCrumb title="other" url="https://blog.lopy.win/categories/other/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://blog.lopy.win/2015/08/17/2015-2015-08-17-ubuntu-vim-gvim/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
         <title>Ubuntu 15.04 gVim安装及设置</title>
@@ -251,7 +145,7 @@
     
   <url>
     <loc>https://blog.lopy.win/2015/09/01/2015-2015-09-01-debian-without-root-login/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
         <title>[转]设置 Debian/Ubuntu 不允许使用 root ssh 登陆</title>
@@ -276,98 +170,8 @@
 
     
   <url>
-    <loc>https://blog.lopy.win/2015/09/09/2015-2015-09-09-php-json-mysql/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>php中的json转码问题以及保存在mysql中出现的问题</title>
-        <pubTime>2015-09-08T16:00:01.000Z</pubTime>
-        
-        <tag>mysql</tag>
-         
-        <tag>php</tag>
-         
-        <tag>json</tag>
-         
-         
-           
-             
-              <breadCrumb title="web" url="https://blog.lopy.win/categories/web/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.lopy.win/2015/09/18/2015-2015-09-18-debian-install-lnmp/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>Debian 7 apt-get一键安装配置搭建最新LNMP</title>
-        <pubTime>2015-09-17T16:00:01.000Z</pubTime>
-        
-        <tag>debian</tag>
-         
-        <tag>lnmp</tag>
-         
-         
-           
-             
-              <breadCrumb title="web" url="https://blog.lopy.win/categories/web/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.lopy.win/2015/09/22/2015-2015-09-22-debian-version-diff/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>debian区分版本</title>
-        <pubTime>2015-09-21T16:00:01.000Z</pubTime>
-        
-        <tag>debian</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://blog.lopy.win/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.lopy.win/2015/09/27/2015-2015-09-27-php-console-params/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>[转]在命令行下运行PHP脚本[带参数]的方法</title>
-        <pubTime>2015-09-26T16:00:01.000Z</pubTime>
-        
-        <tag>php</tag>
-         
-        <tag>cli</tag>
-         
-        <tag>params</tag>
-         
-         
-           
-             
-              <breadCrumb title="web" url="https://blog.lopy.win/categories/web/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://blog.lopy.win/2015/09/28/2015-2015-09-28-php-json-key/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
         <title>PHP处理JSON字符串key缺少双引号的解决方法</title>
@@ -389,7 +193,7 @@
     
   <url>
     <loc>https://blog.lopy.win/2015/10/04/2015-2015-10-04-debian-install-phpredis/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
         <title>debian 安装phpredis 扩展</title>
@@ -413,7 +217,7 @@
     
   <url>
     <loc>https://blog.lopy.win/2015/10/04/2015-2015-10-04-debian-install-redis-mf/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
         <title>[转]debian 编译安装redis</title>
@@ -435,7 +239,7 @@
     
   <url>
     <loc>https://blog.lopy.win/2015/10/04/2015-2015-10-04-debian-install-redis/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
         <title>debian 安装并启动redis</title>
@@ -457,7 +261,7 @@
     
   <url>
     <loc>https://blog.lopy.win/2015/10/14/2015-2015-10-14-mysql-error-50544/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
         <title>Headers and client library minor version mismatch. Headers:50544 Library:506</title>
@@ -475,7 +279,7 @@
     
   <url>
     <loc>https://blog.lopy.win/2015/10/28/2015-2015-10-28-php-fpm-is-masked/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
         <title>Unit php5-fpm.service is masked</title>
@@ -496,83 +300,23 @@
 
     
   <url>
-    <loc>https://blog.lopy.win/2015/11/07/2015-2015-11-07-windows-cygwin-apt/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <loc>https://blog.lopy.win/2016/03/01/2016-2016-03-01-collect-cdn-source/</loc>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
-        <title>Windows下安装Cygwin及包管理器apt-cyg</title>
-        <pubTime>2015-11-06T16:00:01.000Z</pubTime>
+        <title>收集一些cdn公共库</title>
+        <pubTime>2016-02-29T16:00:01.000Z</pubTime>
         
+        <tag>cdn</tag>
          
-           
-             
-              <breadCrumb title="tools" url="https://blog.lopy.win/categories/tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.lopy.win/2015/11/27/2015-2015-11-27-debian-openjdk/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>debian安装Openjdk7</title>
-        <pubTime>2015-11-26T16:00:01.000Z</pubTime>
-        
-        <tag>debian</tag>
+        <tag>js</tag>
          
-        <tag>openjdk</tag>
+        <tag>css</tag>
          
          
            
              
-              <breadCrumb title="linux" url="https://blog.lopy.win/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.lopy.win/2015/11/28/2015-2015-11-28-linux-chm-viewer/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>几款LINUX下的CHM查看器</title>
-        <pubTime>2015-11-27T16:00:01.000Z</pubTime>
-        
-        <tag>reader</tag>
-         
-        <tag>chm</tag>
-         
-         
-           
-             
-              <breadCrumb title="tools" url="https://blog.lopy.win/categories/tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.lopy.win/2015/02/20/2015-2015-02-20-jekyll-bootstrap-start-config/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>jekyll bootstrap 的搭建</title>
-        <pubTime>2015-02-19T16:00:02.000Z</pubTime>
-        
-        <tag>jekyll</tag>
-         
-        <tag>config</tag>
-         
-         
-           
-             
-              <breadCrumb title="other" url="https://blog.lopy.win/categories/other/"/>
+              <breadCrumb title="web" url="https://blog.lopy.win/categories/web/"/>
           
         </display>
     </data>
@@ -581,7 +325,7 @@
     
   <url>
     <loc>https://blog.lopy.win/2016/05/11/2016-2016-05-11-collect-github-frontend-source/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
         <title>在github等开源网站收集前端框架</title>
@@ -603,7 +347,7 @@
     
   <url>
     <loc>https://blog.lopy.win/2016/06/18/2016-2016-06-18-mark-down-learn/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
         <title>MarkDown初步尝试</title>
@@ -623,7 +367,7 @@
     
   <url>
     <loc>https://blog.lopy.win/2016/06/28/2016-2016-06-28-linux-contains-a-file/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
         <title>linux (debian) 启动报错 contains a file system with errors.check forced</title>
@@ -645,7 +389,7 @@
     
   <url>
     <loc>https://blog.lopy.win/2016/07/29/2016-2016-07-29-linux-new-user/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
         <title>linux 新用户不能tab自动补全、退格变^H 等问题</title>
@@ -665,7 +409,7 @@
     
   <url>
     <loc>https://blog.lopy.win/2016/08/01/2016-2016-08-01-phalcon-redirect-send/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
         <title>phalcon 的跳转问题</title>
@@ -685,7 +429,7 @@
     
   <url>
     <loc>https://blog.lopy.win/2016/08/17/2016-2016-08-17-debian-7-php-64-error/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
         <title>debian 7 64位编译php5 的注意点</title>
@@ -703,7 +447,7 @@
     
   <url>
     <loc>https://blog.lopy.win/2016/08/19/2016-2016-08-19-php-error-http500/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
         <title>PHP自动捕捉页面500错误示例</title>
@@ -724,36 +468,14 @@
 
     
   <url>
-    <loc>https://blog.lopy.win/2017/02/20/2017-2017-02-20-debian-realtek-driver/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <loc>https://blog.lopy.win/2015/03/20/2015-2015-03-20-mysql-updateupdate/</loc>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
-        <title>debian realtek 无线网卡安装</title>
-        <pubTime>2017-02-19T16:00:01.000Z</pubTime>
+        <title>MySql更新多条数据不建议使用UPDATE语句</title>
+        <pubTime>2015-03-19T16:00:01.000Z</pubTime>
         
-         
-           
-             
-              <breadCrumb title="linux" url="https://blog.lopy.win/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.lopy.win/2017/03/02/2017-2017-03-02-js-php-rsa/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>rsa的js加密和php解密</title>
-        <pubTime>2017-03-01T16:00:01.000Z</pubTime>
-        
-        <tag>php</tag>
-         
-        <tag>js</tag>
-         
-        <tag>rsa</tag>
+        <tag>mysql</tag>
          
          
            
@@ -766,105 +488,21 @@
 
     
   <url>
-    <loc>https://blog.lopy.win/2017/03/17/2017-2017-03-17-debian-run-graphics-program-at-root/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <loc>https://blog.lopy.win/2015/02/20/2015-2015-02-20-jekyll-bootstrap-start-config/</loc>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
-        <title>debian 以root权限运行图形程序</title>
-        <pubTime>2017-03-16T16:00:01.000Z</pubTime>
+        <title>jekyll bootstrap 的搭建</title>
+        <pubTime>2015-02-19T16:00:02.000Z</pubTime>
         
-        <tag>debian</tag>
+        <tag>jekyll</tag>
          
-        <tag>linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://blog.lopy.win/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.lopy.win/2017/03/22/2017-2017-03-22-debian-iptables-configure/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>debian 的 iptables 的常用配置</title>
-        <pubTime>2017-03-21T16:00:01.000Z</pubTime>
-        
         <tag>config</tag>
          
-        <tag>linux</tag>
-         
-        <tag>iptables</tag>
-         
          
            
              
-              <breadCrumb title="linux" url="https://blog.lopy.win/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.lopy.win/2017/03/22/2017-2017-03-22-swoole-httpserver-attention/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>swoole 做 httpserver 整合phalcon </title>
-        <pubTime>2017-03-21T16:00:02.000Z</pubTime>
-        
-        <tag>php</tag>
-         
-        <tag>phalcon</tag>
-         
-        <tag>swoole</tag>
-         
-         
-           
-             
-              <breadCrumb title="web" url="https://blog.lopy.win/categories/web/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.lopy.win/2017/05/26/2017-2017-05-26-docker-for-win-alter-vdi-path/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>window7 修改docker安装的machine 位置</title>
-        <pubTime>2017-05-25T16:00:01.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="linux" url="https://blog.lopy.win/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.lopy.win/2017/12/01/2017-2017-12-01-ionic-hot-update/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>ionic hot update</title>
-        <pubTime>2017-11-30T16:00:01.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="web" url="https://blog.lopy.win/categories/web/"/>
+              <breadCrumb title="other" url="https://blog.lopy.win/categories/other/"/>
           
         </display>
     </data>
@@ -873,7 +511,7 @@
     
   <url>
     <loc>https://blog.lopy.win/2018/05/17/2018-2018-05-17-debian9-install-vboxadditions/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
         <title>vbox中debian9安装增强功能和文件共享</title>
@@ -895,7 +533,7 @@
     
   <url>
     <loc>https://blog.lopy.win/2018/05/17/2018-2018-05-17-debian9-lnmp/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
         <title>debian9 安装 lnmp</title>
@@ -916,8 +554,314 @@
 
     
   <url>
+    <loc>https://blog.lopy.win/2018/06/28/2018-2018-06-28-jekyll-panxw-blog/</loc>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>jekyll panxw blog</title>
+        <pubTime>2018-06-28T10:07:32.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="other" url="https://blog.lopy.win/categories/other/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopy.win/2018/08/01/2018-2018-08-01-ionic3-gps/</loc>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>ionic3 gps</title>
+        <pubTime>2018-08-01T06:37:21.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopy.win/2018/10/29/2018-2018-10-29-win7-install-vagrant/</loc>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>win7 install vagrant</title>
+        <pubTime>2018-10-29T10:15:21.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopy.win/2015/12/05/2015-2015-12-05-node-js-learn/</loc>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>Node初学者入门，一本全面的NodeJS教程</title>
+        <pubTime>2015-12-04T16:00:01.000Z</pubTime>
+        
+        <tag>node</tag>
+         
+         
+           
+             
+              <breadCrumb title="lessons" url="https://blog.lopy.win/categories/lessons/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopy.win/2015/05/19/2015-2015-05-19-debian-apt-source/</loc>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>我的debian常用apt源</title>
+        <pubTime>2015-05-18T16:00:01.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+         
+           
+             
+              <breadCrumb title="other" url="https://blog.lopy.win/categories/other/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopy.win/2015/09/27/2015-2015-09-27-php-console-params/</loc>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>[转]在命令行下运行PHP脚本[带参数]的方法</title>
+        <pubTime>2015-09-26T16:00:01.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>cli</tag>
+         
+        <tag>params</tag>
+         
+         
+           
+             
+              <breadCrumb title="web" url="https://blog.lopy.win/categories/web/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopy.win/2015/11/07/2015-2015-11-07-windows-cygwin-apt/</loc>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>Windows下安装Cygwin及包管理器apt-cyg</title>
+        <pubTime>2015-11-06T16:00:01.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="tools" url="https://blog.lopy.win/categories/tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopy.win/2015/06/18/2015-2015-06-18-debian-set-timezone/</loc>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>debian 修改时区</title>
+        <pubTime>2015-06-17T16:00:01.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+        <tag>timezone</tag>
+         
+         
+           
+             
+              <breadCrumb title="other" url="https://blog.lopy.win/categories/other/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopy.win/2015/09/18/2015-2015-09-18-debian-install-lnmp/</loc>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>Debian 7 apt-get一键安装配置搭建最新LNMP</title>
+        <pubTime>2015-09-17T16:00:01.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+        <tag>lnmp</tag>
+         
+         
+           
+             
+              <breadCrumb title="web" url="https://blog.lopy.win/categories/web/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopy.win/2015/09/22/2015-2015-09-22-debian-version-diff/</loc>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>debian区分版本</title>
+        <pubTime>2015-09-21T16:00:01.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://blog.lopy.win/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopy.win/2015/08/11/2015-2015-08-11-shadowsocks-config/</loc>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>shadowsocks常用配置</title>
+        <pubTime>2015-08-10T16:00:01.000Z</pubTime>
+        
+        <tag>shadowsocks</tag>
+         
+         
+           
+             
+              <breadCrumb title="other" url="https://blog.lopy.win/categories/other/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopy.win/2015/09/09/2015-2015-09-09-php-json-mysql/</loc>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>php中的json转码问题以及保存在mysql中出现的问题</title>
+        <pubTime>2015-09-08T16:00:01.000Z</pubTime>
+        
+        <tag>mysql</tag>
+         
+        <tag>php</tag>
+         
+        <tag>json</tag>
+         
+         
+           
+             
+              <breadCrumb title="web" url="https://blog.lopy.win/categories/web/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopy.win/2015/11/27/2015-2015-11-27-debian-openjdk/</loc>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>debian安装Openjdk7</title>
+        <pubTime>2015-11-26T16:00:01.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+        <tag>openjdk</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://blog.lopy.win/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopy.win/2015/11/28/2015-2015-11-28-linux-chm-viewer/</loc>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>几款LINUX下的CHM查看器</title>
+        <pubTime>2015-11-27T16:00:01.000Z</pubTime>
+        
+        <tag>reader</tag>
+         
+        <tag>chm</tag>
+         
+         
+           
+             
+              <breadCrumb title="tools" url="https://blog.lopy.win/categories/tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopy.win/2015/07/22/2015-2015-07-22-debian-install-composer/</loc>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>deban安装composer</title>
+        <pubTime>2015-07-21T16:00:01.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+        <tag>php</tag>
+         
+        <tag>composer</tag>
+         
+         
+           
+             
+              <breadCrumb title="web" url="https://blog.lopy.win/categories/web/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://blog.lopy.win/2018/05/30/2018-2018-05-30-winserver-2003-r2-sp2-vol-enterprise/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
         <title>winserver 2003 r2 sp2 vol 企业版</title>
@@ -938,26 +882,8 @@
 
     
   <url>
-    <loc>https://blog.lopy.win/2018/06/28/2018-2018-06-28-jekyll-panxw-blog/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>jekyll panxw blog</title>
-        <pubTime>2018-06-28T10:07:32.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="other" url="https://blog.lopy.win/categories/other/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://blog.lopy.win/2018/07/02/2018-2018-07-02-windows7-iso-ed2k/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <lastmod>2018-10-30T10:41:52.000Z</lastmod>
     <data>
         <display>
         <title>整理win7下载地址</title>
@@ -974,49 +900,123 @@
 
     
   <url>
-    <loc>https://blog.lopy.win/2018/08/01/2018-2018-08-01-ionic3-gps/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <loc>https://blog.lopy.win/2017/12/01/2017-2017-12-01-ionic-hot-update/</loc>
+    <lastmod>2018-10-30T10:30:59.000Z</lastmod>
     <data>
         <display>
-        <title>ionic3 gps</title>
-        <pubTime>2018-08-01T06:37:21.000Z</pubTime>
+        <title>ionic hot update</title>
+        <pubTime>2017-11-30T16:00:01.000Z</pubTime>
         
          
            
+             
+              <breadCrumb title="@web" url="https://blog.lopy.win/categories/web/"/>
+          
         </display>
     </data>
     </url>
 
     
   <url>
-    <loc>https://blog.lopy.win/2018/10/29/2018-2018-10-29-win7-install-vagrant/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
+    <loc>https://blog.lopy.win/2017/03/22/2017-2017-03-22-debian-iptables-configure/</loc>
+    <lastmod>2018-10-30T10:30:59.000Z</lastmod>
     <data>
         <display>
-        <title>win7 install vagrant</title>
-        <pubTime>2018-10-29T10:15:21.000Z</pubTime>
+        <title>debian 的 iptables 的常用配置</title>
+        <pubTime>2017-03-21T16:00:01.000Z</pubTime>
         
+        <tag>config</tag>
          
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.lopy.win/2015/12/05/2015-2015-12-05-node-js-learn/</loc>
-    <lastmod>2018-10-30T09:38:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>Node初学者入门，一本全面的NodeJS教程</title>
-        <pubTime>2015-12-04T16:00:01.000Z</pubTime>
-        
-        <tag>node</tag>
+        <tag>linux</tag>
+         
+        <tag>iptables</tag>
          
          
            
              
-              <breadCrumb title="lessons" url="https://blog.lopy.win/categories/lessons/"/>
+              <breadCrumb title="@linux" url="https://blog.lopy.win/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopy.win/2017/05/26/2017-2017-05-26-docker-for-win-alter-vdi-path/</loc>
+    <lastmod>2018-10-30T10:30:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>window7 修改docker安装的machine 位置</title>
+        <pubTime>2017-05-25T16:00:01.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="@linux" url="https://blog.lopy.win/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopy.win/2017/03/02/2017-2017-03-02-js-php-rsa/</loc>
+    <lastmod>2018-10-30T10:30:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>rsa的js加密和php解密</title>
+        <pubTime>2017-03-01T16:00:01.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>js</tag>
+         
+        <tag>rsa</tag>
+         
+         
+           
+             
+              <breadCrumb title="@web" url="https://blog.lopy.win/categories/web/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopy.win/2017/02/20/2017-2017-02-20-debian-realtek-driver/</loc>
+    <lastmod>2018-10-30T10:30:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>debian realtek 无线网卡安装</title>
+        <pubTime>2017-02-19T16:00:01.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="@linux" url="https://blog.lopy.win/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.lopy.win/2017/03/17/2017-2017-03-17-debian-run-graphics-program-at-root/</loc>
+    <lastmod>2018-10-30T10:30:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>debian 以root权限运行图形程序</title>
+        <pubTime>2017-03-16T16:00:01.000Z</pubTime>
+        
+        <tag>debian</tag>
+         
+        <tag>linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="@linux" url="https://blog.lopy.win/categories/linux/"/>
           
         </display>
     </data>
